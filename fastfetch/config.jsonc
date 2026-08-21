@@ -76,14 +76,13 @@
         },
         {
             "type": "uptime",
-            "key": "  uptime",
-            "format": "{1}"
+            "key": "  uptime"
         },
         "break",
         {
             "type": "packages",
             "key": "  pkgs",
-            "format": "{1}"
+            "slow": true
         },
         "break"
     ]
