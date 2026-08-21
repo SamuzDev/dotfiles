@@ -23,11 +23,6 @@
         }
     },
     "modules": [
-        "break",
-        {
-            "type": "separator",
-            "key": "  "
-        },
         {
             "type": "os",
             "key": "  os",
