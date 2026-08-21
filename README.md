@@ -2,27 +2,8 @@
 
 My personal Linux rice setup with **niri** + **noctalia** + **fish** + **starship**.
 
-## Preview
-
-```
-samuz
-
-os      CachyOS Linux
-kernel  7.2.0-1-cachyos
-shell   /bin/fish
-wm      niri
-term    alacritty
-
-cpu     AMD Ryzen 7 8840U
-gpu     AMD
-mem     4.23 GiB
-uptime  0
-
-pkgs    0
-```
-
 <p align="center">
-  <img src="preview.png" width="800" alt="Desktop screenshot">
+  <img src="preview.png" width="600" alt="Desktop preview">
 </p>
 
 ## Stack
