@@ -1,28 +1,19 @@
 palette = "noctalia"
-add_newline = true
+add_newline = false
 
-format = """
-$username\
-$os\
-$directory\
-$git_branch\
-$git_status\
-$python\
-$nodejs\
-$rust\
-$golang\
-$lua\
-$character"""
-
-right_format = """$cmd_duration\
-$battery\
-$time"""
+format = "$username$os$directory$git_branch$git_status$character"
+right_format = "$cmd_duration$battery$time"
 
 scan_timeout = 100
 
 [character]
-success_symbol = "[❯](bold pink)"
-error_symbol = "[❯](bold red)"
+success_symbol = "[ ](bold pink)[](bold mauve)"
+error_symbol = "[ ](bold red)[](bold mauve)"
+
+[username]
+show_always = true
+style_user = "bold pink"
+format = "[$user]($style) "
 
 [os]
 disabled = false
@@ -36,7 +27,6 @@ CachyOS = " "
 style = "bold mauve"
 truncation_length = 3
 truncation_symbol = "…/"
-read_only = " 🔒"
 
 [git_branch]
 symbol = " "
@@ -104,23 +94,6 @@ format = "[$symbol$version]($style) "
 symbol = "   "
 style = "bold subtext0"
 format = "[$symbol$version]($style) "
-
-[aws]
-symbol = " "
-style = "bold subtext0"
-format = "[$symbol$profile]($style) "
-
-[fill]
-symbol = " "
-
-[env_var]
-symbol = " "
-
-[nix_shell]
-symbol = " "
-
-[container]
-symbol = " "
 
 [status]
 format = "[$symbol$common_meaning]($style) "
