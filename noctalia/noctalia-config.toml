@@ -1,0 +1,210 @@
+[bar]
+order = [ "default", "clean" ]
+
+    [bar.clean]
+    background_opacity = 0.79999998211860657
+    end = [
+        "notifications",
+        "clipboard",
+        "network",
+        "bluetooth",
+        "volume",
+        "brightness",
+        "battery",
+        "control-center",
+        "session",
+        "theme_mode",
+        "tray"
+    ]
+    margin_ends = 875
+    radius_top_left = 5
+    radius_top_right = 5
+    reserve_space = false
+    show_on_workspace_switch = false
+    smart_auto_hide = true
+    start = [
+        "workspaces",
+        "active_window",
+        "caffeine",
+        "custom_button_2",
+        "date",
+        "keybinds",
+        "keyboard_layout",
+        "media",
+        "network_rx",
+        "temp",
+        "audio_visualizer",
+        "cat"
+    ]
+
+    [bar.default]
+    enabled = false
+
+[desktop_widgets]
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[location]
+auto_locate = true
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@eDP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 1018.0
+    output = "eDP-1"
+    placement_height = 1200.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[plugins]
+enabled = [ "kenn/keybind-cheatsheet", "dotnetrob/cat", "umedbazarov/ruh-vpn" ]
+
+[shell]
+avatar_path = "/home/samuz/Downloads/Phosphophyllite.jpg"
+niri_overview_type_to_launch_enabled = true
+
+    [shell.launcher]
+    pinned = [ "vesktop", "spotify" ]
+
+[theme]
+builtin = "Kanagawa"
+community_palette = "ADW"
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "m3-monochrome"
+
+    [theme.templates]
+    builtin_ids = [ "alacritty", "btop", "niri", "starship" ]
+    community_ids = [ "opencode", "zen-browser", "discord", "vscode" ]
+
+[wallpaper]
+directory = "/home/samuz/Pictures/Wallpapers"
+
+    [wallpaper.default]
+    path = "/home/samuz/Pictures/Wallpapers/wallhaven-1q2kd9.jpg"
+
+    [wallpaper.last]
+    path = "/home/samuz/Pictures/Wallpapers/wallhaven-1q2kd9.jpg"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/samuz/Pictures/Wallpapers/wallhaven-1q2kd9.jpg"
+
+    [[wallpaper.favorite]]
+    community_palette = "ADW"
+    palette_source = "community"
+    path = "/home/samuz/Pictures/Wallpapers/0a59id.png"
+    theme_mode = "dark"
+
+[widget.active_window]
+display = "icon_only"
+enabled = false
+
+[widget.audio_visualizer]
+enabled = false
+
+[widget.battery]
+enabled = false
+
+[widget.bluetooth]
+enabled = false
+
+[widget.brightness]
+enabled = false
+
+[widget.caffeine]
+enabled = false
+
+[widget.cat]
+type = "dotnetrob/cat:cat"
+
+[widget.clipboard]
+enabled = false
+
+[widget.clock]
+font_family = "Bitstream Vera Sans"
+font_weight = 700
+
+[widget.control-center]
+enabled = false
+
+[widget.custom_button_2]
+enabled = false
+type = "custom_button"
+
+[widget.date]
+enabled = false
+
+[widget.keybinds]
+enabled = false
+type = "kenn/keybind-cheatsheet:keybinds"
+
+[widget.keyboard_layout]
+enabled = false
+
+[widget.media]
+artist_first = true
+enabled = false
+hide_artist = true
+max_length = 108
+min_length = 0
+
+[widget.network]
+enabled = false
+
+[widget.network_rx]
+enabled = false
+
+[widget.notifications]
+enabled = false
+
+[widget.session]
+enabled = false
+
+[widget.temp]
+enabled = false
+
+[widget.theme_mode]
+enabled = false
+
+[widget.volume]
+enabled = false
+
+[widget.workspaces]
+enabled = false
+font_weight = 500
+style = "minimal"
