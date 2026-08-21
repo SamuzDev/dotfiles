@@ -5,14 +5,25 @@ My personal Linux rice setup with **niri** + **noctalia** + **fish** + **starshi
 ## Preview
 
 ```
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⠓⠶⣤⠀⠀⠀⠀⣠⠶⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀         samuz
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠇⠀⢠⡏⠀⠀⢀⡔⠉⠀⢈⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠩⠤⣄⣼⠁⠀⣠⠟⠀⠀⣠⠏⠀⠀⢀⣀⠀⠀⠀⠀⠀⠀⠀        os CachyOS Linux
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⢀⣀⣀⣀⣀⣀⣀⣀⠀⠀⠀⠁⠀⠀⠣⣤⣀⡼⠃⠀⢀⡴⠋⠈⠳⡄⠀⠀⠀⠀⠀        kernel 7.2.0-1-cachyos
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣶⣿⡿⠿⠿⠟⠛⠛⠛⠛⠿⠿⣿⣿⣶⣤⣄⠀⠀⠀⠉⠀⢀⡴⠋⠀⠀⣠⠞⠁⠀⠀⠀⠀⠀        shell /bin/fish
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣾⣿⠿⠋⠉⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠻⢿⣿⣶⣄⠀⠀⠳⣄⠀⣠⠞⢁⡠⢶⡄⠀⠀⠀⠀        wm niri
-  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⠿⠋⠀⠀⢀⣴⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⢤⡈⠛⢿⣿⣦⡀⠈⠛⢡⠚⠃⠀⠀⢹⡆⠀⠀⠀        term alacritty
+samuz
+
+os      CachyOS Linux
+kernel  7.2.0-1-cachyos
+shell   /bin/fish
+wm      niri
+term    alacritty
+
+cpu     AMD Ryzen 7 8840U
+gpu     AMD
+mem     4.23 GiB
+uptime  0
+
+pkgs    0
 ```
+
+<p align="center">
+  <img src="preview.png" width="800" alt="Desktop screenshot">
+</p>
 
 ## Stack
 
@@ -27,6 +38,7 @@ My personal Linux rice setup with **niri** + **noctalia** + **fish** + **starshi
 | App Launcher | [fuzzel](https://codeberg.org/dnkl/fuzzel) |
 | Git TUI | [lazygit](https://github.com/jesseduffield/lazygit) |
 | System Info | [fastfetch](https://github.com/fastfetch-cli/fastfetch) |
+| Audio Visualizer | [cava](https://github.com/karstensensensen/cava) |
 
 ## Included Configs
 
@@ -54,9 +66,12 @@ dotfiles/
 │   ├── logo.txt
 │   └── generate-config.sh
 ├── alacritty/         # Terminal config
-│   └── alacritty.toml
+│   ├── alacritty.toml
+│   └── themes/
 ├── btop/              # System monitor
 │   └── btop.conf
+├── cava/              # Audio visualizer
+│   └── config
 ├── fuzzel/            # App launcher
 │   └── fuzzel.ini
 ├── lazygit/           # Git TUI
@@ -98,7 +113,7 @@ The installer will:
 Install on CachyOS/Arch:
 
 ```bash
-sudo pacman -S niri fish starship fastfetch alacritty btop fuzzel lazygit eza zoxide direnv
+sudo pacman -S niri fish starship fastfetch alacritty btop fuzzel lazygit eza zoxide direnv cava
 # noctalia from AUR
 yay -S noctalia
 ```
