@@ -19,16 +19,11 @@
             "output": "#cdd6f4"
         },
         "key": {
-            "width": 10
+            "width": 12
         }
     },
     "modules": [
         "break",
-        {
-            "type": "title",
-            "key": "  ",
-            "format": "{1}"
-        },
         {
             "type": "separator",
             "key": "  "
@@ -86,8 +81,9 @@
         },
         "break",
         {
-            "type": "custom",
-            "format": "         \u001b[38;2;125;125;125m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\u001b[0m"
+            "type": "colors",
+            "key": "  ",
+            "symbol": " "
         }
     ]
 }
