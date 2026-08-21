@@ -6,8 +6,11 @@ if status is-interactive
     command -v direnv &> /dev/null && direnv hook fish | source
     command -v zoxide &> /dev/null && zoxide init fish --cmd cd | source
 
+    # Noctalia LS_COLORS
+    set -gx LS_COLORS "di=38;2;203;166;247:ln=38;2;137;220;235:so=38;2;245;224;220:pi=38;2;250;179;135:ex=38;2;245;194;231:bd=38;2;180;190;254:cd=38;2;180;190;254:su=38;2;250;179;135:sg=38;2;250;179;135:tw=38;2;203;166;247:ow=38;2;203;166;247:st=38;2;205;214;244:or=38;2;250;179;135"
+
     # Better ls
-    command -v eza &> /dev/null && alias ls='eza --icons --group-directories-first -1'
+    command -v eza &> /dev/null && alias ls='eza --icons --group-directories-first -1 --color=auto'
 
     # Abbrs
     abbr lg 'lazygit'
@@ -31,9 +34,6 @@ if status is-interactive
     abbr ll 'ls -l'
     abbr la 'ls -a'
     abbr lla 'ls -la'
-
-    # Custom colours
-    cat ~/.local/state/caelestia/sequences.txt 2> /dev/null
 
     # For jumping between prompts in foot terminal
     function mark_prompt_start --on-event fish_prompt
