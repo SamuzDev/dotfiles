@@ -9,7 +9,7 @@ scan_timeout = 100
 [username]
 show_always = true
 style_user = "bold pink"
-format = "[さむず]($style)"
+format = "[さむず]($style) "
 
 [character]
 success_symbol = "[ ](bold pink)[](bold mauve)"
