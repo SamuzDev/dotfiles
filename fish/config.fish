@@ -31,9 +31,10 @@ if status is-interactive
     abbr gsh 'git show'
 
     abbr l 'ls'
-    abbr ll 'ls -l'
+    abbr ll 'tree -L 1 --dirsfirst'
     abbr la 'ls -a'
     abbr lla 'ls -la'
+    abbr lt 'tree -L 2 --dirsfirst'
 
     # For jumping between prompts in foot terminal
     function mark_prompt_start --on-event fish_prompt
