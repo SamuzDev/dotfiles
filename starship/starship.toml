@@ -5,7 +5,6 @@ format = "$directory$git_branch$git_status$character"
 right_format = "$cmd_duration$battery$directory$python$nodejs$rust$golang$lua$time"
 
 scan_timeout = 100
-truncation_length = 40
 
 [character]
 success_symbol = "[❯](bold mauve)"
@@ -47,7 +46,6 @@ full_symbol = " "
 charging_symbol = " "
 discharging_symbol = " "
 format = "[$symbol $percentage]($style) "
-display_threshold = 20
 
 [[battery.display]]
 threshold = 20
@@ -67,31 +65,26 @@ format = "[ $time]($style)"
 symbol = " "
 style = "bold peach"
 format = "[$symbol$version]($style) "
-only_files = true
 
 [nodejs]
 symbol = " "
 style = "bold teal"
 format = "[$symbol$version]($style) "
-only_files = true
 
 [rust]
 symbol = " "
 style = "bold flamingo"
 format = "[$symbol$version]($style) "
-only_files = true
 
 [golang]
 symbol = " "
 style = "bold sky"
 format = "[$symbol$version]($style) "
-only_files = true
 
 [lua]
 symbol = " "
 style = "bold sapphire"
 format = "[$symbol$version]($style) "
-only_files = true
 
 [package]
 symbol = "   "
