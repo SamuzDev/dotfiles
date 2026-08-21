@@ -1,0 +1,23 @@
+input {
+    keyboard {
+        xkb {
+            layout "us,latam"
+            options "grp:win_space_toggle"
+        }
+        
+        numlock
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+    }
+
+    mouse {
+        // accel-profile "flat"
+        // accel-speed 0.0
+    }
+
+    focus-follows-mouse
+    workspace-auto-back-and-forth
+}
