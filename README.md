@@ -3,7 +3,7 @@
 My personal Linux rice setup with **niri** + **noctalia** + **fish** + **starship**.
 
 <p align="center">
-  <img src="preview.png" width="600" alt="Desktop preview">
+  <img src="https://raw.githubusercontent.com/SamuzDev/dotfiles/main/preview.png" width="600" alt="Desktop preview">
 </p>
 
 ## Stack
