@@ -1,22 +1,36 @@
 palette = "noctalia"
-add_newline = false
+add_newline = true
 
-format = "$directory$git_branch$git_status$character"
-right_format = "$cmd_duration$battery$directory$python$nodejs$rust$golang$lua$time"
+format = """
+$username\
+$os\
+$directory\
+$git_branch\
+$git_status\
+$python\
+$nodejs\
+$rust\
+$golang\
+$lua\
+$character"""
+
+right_format = """$cmd_duration\
+$battery\
+$time"""
 
 scan_timeout = 100
 
 [character]
-success_symbol = "[❯](bold mauve)"
-error_symbol = "[❯](bold flamingo)"
+success_symbol = "[❯](bold pink)"
+error_symbol = "[❯](bold red)"
 
 [os]
 disabled = false
-style = "bold mauve"
+style = "bold pink"
 format = "[$name ]($style)"
 
 [os.symbols]
-CachyOS = "  "
+CachyOS = " "
 
 [directory]
 style = "bold mauve"
@@ -132,8 +146,8 @@ white     = "#e2e2e2"
 black     = "#474747"
 rosewater = "#c6c6c6"
 flamingo  = "#ffb4ab"
-pink      = "#7d7d7d"
-mauve     = "#7d7d7d"
+pink      = "#f5c2e7"
+mauve     = "#cba6f7"
 maroon    = "#ffb4ab"
 peach     = "#c6c6c6"
 teal      = "#ababab"
