@@ -1,27 +1,19 @@
 palette = "noctalia"
-add_newline = false
+add_newline = true
 
-format = "$username$os$directory$git_branch$git_status$character"
-right_format = "$cmd_duration$battery$time"
+format = "$username$directory$character"
+right_format = "$directory$git_branch$git_status$cmd_duration$battery$time"
 
 scan_timeout = 100
-
-[character]
-success_symbol = "[ ](bold pink)[](bold mauve)"
-error_symbol = "[ ](bold red)[](bold mauve)"
 
 [username]
 show_always = true
 style_user = "bold pink"
 format = "[$user]($style) "
 
-[os]
-disabled = false
-style = "bold pink"
-format = "[$name ]($style)"
-
-[os.symbols]
-CachyOS = " "
+[character]
+success_symbol = "[ ](bold pink)[](bold mauve)"
+error_symbol = "[ ](bold red)[](bold mauve)"
 
 [directory]
 style = "bold mauve"
@@ -38,7 +30,7 @@ style = "bold yellow"
 format = "[$all_status$ahead_behind]($style) "
 untracked = "?"
 modified = "+"
-staged = "●"
+staged = "*"
 
 [cmd_duration]
 min_time = 3000
@@ -46,9 +38,9 @@ style = "italic subtext0"
 format = "[ $duration]($style) "
 
 [battery]
-full_symbol = " "
-charging_symbol = " "
-discharging_symbol = " "
+full_symbol = "F "
+charging_symbol = "C "
+discharging_symbol = "D "
 format = "[$symbol $percentage]($style) "
 
 [[battery.display]]
@@ -65,44 +57,14 @@ time_format = "%R"
 style = "bold subtext1"
 format = "[ $time]($style)"
 
-[python]
-symbol = " "
-style = "bold peach"
-format = "[$symbol$version]($style) "
-
-[nodejs]
-symbol = " "
-style = "bold teal"
-format = "[$symbol$version]($style) "
-
-[rust]
-symbol = " "
-style = "bold flamingo"
-format = "[$symbol$version]($style) "
-
-[golang]
-symbol = " "
-style = "bold sky"
-format = "[$symbol$version]($style) "
-
-[lua]
-symbol = " "
-style = "bold sapphire"
-format = "[$symbol$version]($style) "
-
-[package]
-symbol = "   "
-style = "bold subtext0"
-format = "[$symbol$version]($style) "
-
 [status]
 format = "[$symbol$common_meaning]($style) "
 map_symbol = true
 disabled = false
 
 [status.symbol]
-success = ""
-error = "✗"
+success = "ok"
+error = "err"
 
 [status.style]
 success = "bold green"
