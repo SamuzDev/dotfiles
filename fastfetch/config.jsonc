@@ -84,6 +84,14 @@
             "key": "  pkgs",
             "slow": true
         },
-        "break"
+        "break",
+        {
+            "type": "colors",
+            "key": "  ",
+            "symbol": "  "
+        },
+        {
+            "type": "break"
+        }
     ]
 }
