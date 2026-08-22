@@ -1,8 +1,8 @@
 palette = "noctalia"
 add_newline = true
 
-format = "$username$character"
-right_format = "$directory$git_branch$git_status$cmd_duration$battery$time"
+format = "$username$directory$character"
+right_format = "$git_branch$git_status$cmd_duration$battery$time"
 
 scan_timeout = 100
 
