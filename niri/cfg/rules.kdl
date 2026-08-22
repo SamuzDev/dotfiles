@@ -26,8 +26,15 @@
     }
 
     window-rule {
-        opacity 0.97
+        opacity 0.95
         draw-border-with-background false
+    }
+
+    window-rule {
+        match app-id="Alacritty"
+    	background-effect {
+            blur true
+    	}
     }
 
     window-rule {
