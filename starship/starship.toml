@@ -1,7 +1,7 @@
 palette = "noctalia"
 add_newline = true
 
-format = "$username$directory$character"
+format = "$username$character"
 right_format = "$directory$git_branch$git_status$cmd_duration$battery$time"
 
 scan_timeout = 100
@@ -90,8 +90,8 @@ black     = "#474747"
 # Extended palette (Catppuccin-compatible names)
 rosewater = "#c6c6c6"
 flamingo  = "#ffb4ab"
-pink      = "#f5c2e7"
-mauve     = "#cba6f7"
+pink      = "#7d7d7d"
+mauve     = "#7d7d7d"
 maroon    = "#ffb4ab"
 peach     = "#c6c6c6"
 teal      = "#ababab"
