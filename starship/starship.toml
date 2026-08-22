@@ -52,7 +52,7 @@ threshold = 100
 style = "italic subtext0"
 
 [time]
-disabled = false
+disabled = true
 time_format = "%R"
 style = "bold subtext1"
 format = "[ $time]($style)"
@@ -60,7 +60,7 @@ format = "[ $time]($style)"
 [status]
 format = "[$symbol$common_meaning]($style) "
 map_symbol = true
-disabled = false
+disabled = true
 
 [status.symbol]
 success = "ok"
@@ -90,8 +90,8 @@ black     = "#474747"
 # Extended palette (Catppuccin-compatible names)
 rosewater = "#c6c6c6"
 flamingo  = "#ffb4ab"
-pink      = "#7d7d7d"
-mauve     = "#7d7d7d"
+pink      = "#f5c2e7"
+mauve     = "#cba6f7"
 maroon    = "#ffb4ab"
 peach     = "#c6c6c6"
 teal      = "#ababab"
