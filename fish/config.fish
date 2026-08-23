@@ -10,7 +10,7 @@ if status is-interactive
     set -gx LS_COLORS "di=38;2;203;166;247:ln=38;2;137;220;235:so=38;2;245;224;220:pi=38;2;250;179;135:ex=38;2;245;194;231:bd=38;2;180;190;254:cd=38;2;180;190;254:su=38;2;250;179;135:sg=38;2;250;179;135:tw=38;2;203;166;247:ow=38;2;203;166;247:st=38;2;205;214;244:or=38;2;250;179;135"
 
     # Better ls
-    command -v eza &> /dev/null && alias ls='eza --icons --group-directories-first -1 --color=auto'
+    command -v lsd &> /dev/null && alias ls='lsd --icon=auto --group-directories-first'
 
     # Abbrs
     abbr lg 'lazygit'
@@ -45,3 +45,6 @@ if status is-interactive
     set -q XDG_CONFIG_HOME && set -l cConf $XDG_CONFIG_HOME/caelestia || set -l cConf $HOME/.config/caelestia
     source $cConf/user-config.fish 2> /dev/null
 end
+
+export MOZ_ENABLE_WAYLAND=1
+export GDK_BACKEND=wayland
