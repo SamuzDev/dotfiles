@@ -1,12 +1,10 @@
-/* Noctalia Thunar Theme - Minimalist */
+/* Noctalia Thunar Theme */
 
-/* Global */
 window, .thunar {
     background-color: #131313;
     color: #e2e2e2;
 }
 
-/* Header bar */
 headerbar, .header-bar {
     background-color: #131313;
     border-bottom: 1px solid #2a2a2a;
@@ -26,23 +24,6 @@ headerbar button:hover, .header-bar button:hover {
     background-color: #1e1e1e;
 }
 
-/* Pathbar */
-.pathbar button {
-    background: transparent;
-    border: none;
-    color: #919191;
-    padding: 2px 6px;
-}
-
-.pathbar button:checked {
-    color: #f5c2e7;
-}
-
-.pathbar button:hover {
-    color: #e2e2e2;
-}
-
-/* Sidebar */
 .sidebar {
     background-color: #131313;
     border-right: 1px solid #2a2a2a;
@@ -58,11 +39,6 @@ headerbar button:hover, .header-bar button:hover {
     color: #f5c2e7;
 }
 
-.sidebar row:hover {
-    background-color: #1a1a1a;
-}
-
-/* File list */
 .view, .view iconview {
     background-color: #131313;
     color: #e2e2e2;
@@ -77,24 +53,86 @@ headerbar button:hover, .header-bar button:hover {
     background-color: #1a1a1a;
 }
 
-/* Columns */
-headerbar button.title, .header-bar button.title {
-    color: #919191;
-}
-
-headerbar button.title:checked, .header-bar button.title:checked {
-    color: #f5c2e7;
-}
-
-/* Status bar */
 .statusbar {
     background-color: #131313;
     border-top: 1px solid #2a2a2a;
     color: #7d7d7d;
-    padding: 2px 8px;
 }
 
-/* Toolbar */
+scrollbar {
+    background-color: transparent;
+}
+
+scrollbar slider {
+    background-color: #474747;
+    border-radius: 4px;
+    min-width: 6px;
+}
+
+scrollbar slider:hover {
+    background-color: #7d7d7d;
+}
+
+notebook tab {
+    background-color: #131313;
+    color: #919191;
+    border: none;
+    padding: 4px 12px;
+}
+
+notebook tab:checked {
+    color: #f5c2e7;
+    border-bottom: 2px solid #f5c2e7;
+}
+
+separator {
+    background-color: #2a2a2a;
+}
+
+tooltip {
+    background-color: #1e1e1e;
+    color: #e2e2e2;
+    border: 1px solid #474747;
+    border-radius: 6px;
+}
+
+menu, .menu {
+    background-color: #1e1e1e;
+    color: #e2e2e2;
+    border: 1px solid #474747;
+    border-radius: 8px;
+}
+
+menu menuitem, .menu menuitem {
+    padding: 6px 12px;
+}
+
+menu menuitem:hover, .menu menuitem:hover {
+    background-color: #2a2a2a;
+}
+
+progressbar trough {
+    background-color: #2a2a2a;
+}
+
+progressbar progress {
+    background-color: #f5c2e7;
+}
+
+.pathbar button {
+    background: transparent;
+    border: none;
+    color: #919191;
+}
+
+.pathbar button:checked {
+    color: #f5c2e7;
+}
+
+.pathbar button:hover {
+    color: #e2e2e2;
+}
+
 toolbar {
     background-color: #131313;
     border-bottom: 1px solid #2a2a2a;
@@ -108,77 +146,4 @@ toolbar button {
 
 toolbar button:hover {
     background-color: #1e1e1e;
-}
-
-/* Scrollbar */
-scrollbar {
-    background-color: transparent;
-}
-
-scrollbar slider {
-    background-color: #474747;
-    border-radius: 4px;
-    min-width: 6px;
-    min-height: 6px;
-}
-
-scrollbar slider:hover {
-    background-color: #7d7d7d;
-}
-
-/* Tabs */
-.notebook tab {
-    background-color: #131313;
-    color: #919191;
-    border: none;
-    padding: 4px 12px;
-}
-
-.notebook tab:checked {
-    color: #f5c2e7;
-    border-bottom: 2px solid #f5c2e7;
-}
-
-.notebook tab:hover {
-    color: #e2e2e2;
-}
-
-/* Separator */
-separator {
-    background-color: #2a2a2a;
-}
-
-/* Tooltip */
-tooltip {
-    background-color: #1e1e1e;
-    color: #e2e2e2;
-    border: 1px solid #474747;
-    border-radius: 6px;
-    padding: 4px 8px;
-}
-
-/* Context menu */
-menu, .menu {
-    background-color: #1e1e1e;
-    color: #e2e2e2;
-    border: 1px solid #474747;
-    border-radius: 8px;
-    padding: 4px 0;
-}
-
-menu menuitem, .menu menuitem {
-    padding: 6px 12px;
-}
-
-menu menuitem:hover, .menu menuitem:hover {
-    background-color: #2a2a2a;
-}
-
-/* Progress bar */
-progressbar trough {
-    background-color: #2a2a2a;
-}
-
-progressbar progress {
-    background-color: #f5c2e7;
 }
