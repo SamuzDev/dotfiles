@@ -59,6 +59,8 @@ link "alacritty" "alacritty"
 link "btop" "btop"
 link "fuzzel" "fuzzel"
 link "lazygit" "lazygit"
+link "gtk3" "gtk-3.0"
+link "noctalia" "noctalia"
 
 echo ""
 info "Installing dependencies..."

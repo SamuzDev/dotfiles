@@ -174,3 +174,59 @@ toolbar button {
 toolbar button:hover {
     background-color: #1e1e1e;
 }
+
+/* Noctalia Nautilus Theme */
+
+nautilus-window,
+.nautilus-window {
+    background-color: #131313;
+    color: #e2e2e2;
+}
+
+nautilus-window .sidebar,
+.nautilus-window .sidebar {
+    background-color: #131313;
+}
+
+nautilus-window .nautilus-view,
+.nautilus-window .view,
+.nautilus-window .icon-view,
+nautilus-window .list-view,
+.nautilus-window .grid-view {
+    background-color: #131313;
+    color: #e2e2e2;
+}
+
+nautilus-window .floating-bar {
+    background-color: #1e1e1e;
+    color: #e2e2e2;
+    border-top: 1px solid #2a2a2a;
+}
+
+nautilus-window .path-bar button {
+    background: transparent;
+    color: #919191;
+}
+
+nautilus-window .path-bar button:checked {
+    color: #f5c2e7;
+}
+
+nautilus-window .path-bar button:hover {
+    color: #e2e2e2;
+}
+
+nautilus-window headerbar {
+    background-color: #131313;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+nautilus-window headerbar button {
+    background: transparent;
+    border: none;
+    color: #e2e2e2;
+}
+
+nautilus-window headerbar button:hover {
+    background-color: #1e1e1e;
+}
