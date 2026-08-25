@@ -62,7 +62,12 @@ link "lazygit" "lazygit"
 link "gtk3" "gtk-3.0"
 link "noctalia" "noctalia"
 link "cava" "cava"
-link "wallpapers" "wallpapers"
+
+# Copy wallpapers (not symlink - for portability)
+info "Copying wallpapers..."
+mkdir -p "$CONFIG_DIR/wallpapers"
+cp -r "$DOTFILES_DIR/wallpapers/"* "$CONFIG_DIR/wallpapers/" 2>/dev/null
+success "Wallpapers copied to ~/.config/wallpapers"
 
 echo ""
 info "Installing dependencies..."

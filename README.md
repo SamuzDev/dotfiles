@@ -57,13 +57,16 @@ dotfiles/
 │   └── fuzzel.ini
 ├── lazygit/           # Git TUI
 │   └── config.yml
-├── wallpapers -> ../Pictures/Wallpapers  # Wallpaper collection (symlink)
+├── wallpapers/        # Wallpaper collection
+│   ├── wallhaven-*.jpg
+│   ├── tux.png
+│   └── ...
 └── install.sh         # Installer script
 ```
 
 ## Wallpapers
 
-Wallpapers are symlinked from `~/Pictures/Wallpapers`. To add new wallpapers, place them in that directory. Noctalia uses them for theme generation via `Mod+Shift+Return`.
+Wallpapers are included in the repo and copied to `~/.config/wallpapers` during installation. Noctalia uses them for theme generation via `Mod+Shift+Return`.
 
 ## Installation
 
