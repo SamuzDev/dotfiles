@@ -57,8 +57,13 @@ dotfiles/
 │   └── fuzzel.ini
 ├── lazygit/           # Git TUI
 │   └── config.yml
+├── wallpapers -> ../Pictures/Wallpapers  # Wallpaper collection (symlink)
 └── install.sh         # Installer script
 ```
+
+## Wallpapers
+
+Wallpapers are symlinked from `~/Pictures/Wallpapers`. To add new wallpapers, place them in that directory. Noctalia uses them for theme generation via `Mod+Shift+Return`.
 
 ## Installation
 

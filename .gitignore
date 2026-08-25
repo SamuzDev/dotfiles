@@ -2,3 +2,4 @@
 *.backup
 .cache/
 *.log
+graphify-out/
