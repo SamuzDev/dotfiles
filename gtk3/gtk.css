@@ -27,15 +27,42 @@ headerbar button:hover, .header-bar button:hover {
 .sidebar {
     background-color: #131313;
     border-right: 1px solid #2a2a2a;
+    padding: 8px 0;
 }
 
 .sidebar .view, .sidebar row {
     background-color: transparent;
     color: #919191;
+    padding: 6px 12px;
+    border-radius: 8px;
+    margin: 2px 8px;
+    min-height: 28px;
 }
 
 .sidebar row:selected {
     background-color: #1e1e1e;
+    color: #f5c2e7;
+}
+
+.sidebar row:hover {
+    background-color: #1a1a1a;
+}
+
+.sidebar header {
+    background-color: transparent;
+    color: #7d7d7d;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 12px 16px 4px 16px;
+    letter-spacing: 0.5px;
+}
+
+.sidebar image {
+    color: #919191;
+    padding-right: 8px;
+}
+
+.sidebar row:selected image {
     color: #f5c2e7;
 }
 
