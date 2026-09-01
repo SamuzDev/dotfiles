@@ -61,6 +61,9 @@ dotfiles/
 │   ├── wallhaven-*.jpg
 │   ├── tux.png
 │   └── ...
+├── spicetify/         # Spotify theme (text by darkthemer)
+│   ├── config-xpui.ini
+│   └── Themes/text/
 └── install.sh         # Installer script
 ```
 

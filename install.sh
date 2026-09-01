@@ -62,6 +62,7 @@ link "lazygit" "lazygit"
 link "gtk3" "gtk-3.0"
 link "noctalia" "noctalia"
 link "cava" "cava"
+link "spicetify" "spicetify"
 
 # Copy wallpapers (not symlink - for portability)
 info "Copying wallpapers..."
