@@ -16,6 +16,7 @@ bar_spacing = 0
 bar_height = 100
 
 [color]
+theme = "noctalia"
 gradient = 1
 gradient_count = 4
 gradient_color_1 = '#ffb4ab'
