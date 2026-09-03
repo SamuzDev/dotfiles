@@ -1,4 +1,4 @@
-# Cava - modo 1: color plano, barras JUNTAS y GRUESAS
+# Cava - modo 2: color plano, barras CON ESPACIO (normales)
 
 [general]
 framerate = 60
@@ -10,8 +10,8 @@ source = auto
 [output]
 method = ncurses
 style = mono
-bar_width = 3
-bar_spacing = 0
+bar_width = 2
+bar_spacing = 1
 bar_height = 100
 
 [color]

@@ -1,19 +1,19 @@
 #!/bin/bash
-# Toggle between cava configs (3 modes)
+# Toggle between 3 cava modes
 
 CAVA_CONFIG="$HOME/.config/cava/config"
 MODE_FILE="$HOME/.config/cava/.mode"
 
 MODES=(
-    "$HOME/dotfiles/cava/config"             # 0: ncurses, rosa, gap mínimo
-    "$HOME/dotfiles/cava/config.inverted"    # 1: ncurses, blanco→negro, gap mínimo
-    "$HOME/.config/cava/config.43pr"         # 2: 43PR gris/blanco, con espacio
+    "$HOME/dotfiles/cava/config"           # 0: plano blanco, barras JUNTAS y GRUESAS
+    "$HOME/dotfiles/cava/config.spaced"    # 1: plano blanco, barras CON ESPACIO
+    "$HOME/.config/cava/config.43pr"       # 2: 43PR (gris/blanco, con espacio)
 )
 
 NAMES=(
-    "NCURSES rosa (barras juntas)"
-    "NCURSES invertido blanco→negro (barras juntas)"
-    "43PR noncurses gris/blanco (con espacio)"
+    "Plano blanco - barras JUNTAS y GRUESAS"
+    "Plano blanco - barras CON ESPACIO"
+    "43PR (gradiente gris/blanco, con espacio)"
 )
 
 CURRENT=0
