@@ -1,20 +1,26 @@
 #!/bin/bash
-# Toggle between cava configs: yours vs 43PR's
+# Toggle between cava configs (3 modes)
 
 CAVA_CONFIG="$HOME/.config/cava/config"
-YOUR_CONFIG="$HOME/dotfiles/cava/config"
-THEIR_CONFIG="$HOME/.config/cava/config.43pr"
+MODE_FILE="$HOME/.config/cava/.mode"
 
-# Check current config and toggle
-if diff -q "$CAVA_CONFIG" "$YOUR_CONFIG" >/dev/null 2>&1; then
-    cp "$THEIR_CONFIG" "$CAVA_CONFIG"
-    echo "→ 43PR config (gradiente gris/blanco, barras con espacio)"
-else
-    cp "$YOUR_CONFIG" "$CAVA_CONFIG"
-    echo "→ Tu config (plano rosa, barras juntas)"
-fi
+MODES=(
+    "$HOME/dotfiles/cava/config"             # 0: ncurses, rosa, gap mínimo
+    "$HOME/dotfiles/cava/config.inverted"    # 1: ncurses, blanco→negro, gap mínimo
+    "$HOME/.config/cava/config.43pr"         # 2: 43PR gris/blanco, con espacio
+)
 
-# Si cava está corriendo, recarga con 'r' (cava hotkey)
-if pgrep -x cava >/dev/null; then
-    echo "  cava detectado → presiona 'r' en cava para recargar"
-fi
+NAMES=(
+    "NCURSES rosa (barras juntas)"
+    "NCURSES invertido blanco→negro (barras juntas)"
+    "43PR noncurses gris/blanco (con espacio)"
+)
+
+CURRENT=0
+[ -f "$MODE_FILE" ] && CURRENT=$(cat "$MODE_FILE")
+
+NEXT=$(( (CURRENT + 1) % ${#MODES[@]} ))
+cp "${MODES[$NEXT]}" "$CAVA_CONFIG"
+echo "$NEXT" > "$MODE_FILE"
+echo "→ ${NAMES[$NEXT]}"
+pgrep -x cava >/dev/null && echo "  cava corriendo → presiona 'r' para recargar"
