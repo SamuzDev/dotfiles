@@ -96,6 +96,9 @@ bash: spicetify apply */
 .view-homeShortcutsGrid-imageContainer img {
     display: var(--display-card-image) !important;
 }
+.view-homeShortcutsGrid-shortcuts {
+    background-color: var(--spice-main-bg);
+}
 .main-coverSlotCollapsed-container {
     display: var(--display-coverart-image);
 }
@@ -171,8 +174,8 @@ div:has(> .main-entityHeader-container) {
 .main-trackList-trackListHeaderStuck.main-trackList-trackListHeader,
 .main-entityHeader-container + div,
 .main-entityHeader-container + div > div {
-    background-color: var(--spice-main) !important;
-    background: var(--spice-main);
+    background-color: var(--spice-main-bg) !important;
+    background: var(--spice-main-bg);
     transition: unset !important;
 }
 .LayoutResizer__resize-bar {
@@ -248,6 +251,14 @@ div:has(> .main-entityHeader-container) {
     --spice-rgb-tab-active: var(--spice-rgb-main);
 
     --text-subdued: var(--spice-subtext) !important;
+
+    --bg-opacity: 0.7;
+    --spice-main-bg: rgba(var(--spice-rgb-main), var(--bg-opacity));
+    --spice-sidebar-bg: rgba(var(--spice-rgb-sidebar), var(--bg-opacity));
+    --spice-player-bg: rgba(var(--spice-rgb-player), var(--bg-opacity));
+    --spice-card-bg: rgba(var(--spice-rgb-card), var(--bg-opacity));
+    --spice-highlight-bg: rgba(var(--spice-rgb-highlight), var(--bg-opacity));
+    --spice-shadow-bg: rgba(var(--spice-rgb-shadow), var(--bg-opacity));
 }
 .encore-dark-theme,
 .encore-dark-theme .encore-base-set {
@@ -274,7 +285,7 @@ div:has(> .main-entityHeader-container) {
 .main-yourLibraryX-libraryContainer,
 .main-globalNav-navLink,
 .main-topBar-searchBar {
-    background-color: var(--spice-main);
+    background-color: var(--spice-main-bg);
 }
 .main-playPauseButton-button {
     background-color: transparent;
@@ -318,7 +329,7 @@ img[src*="equaliser"] {
     color: var(--spice-button-active);
 }
 .main-trackList-placeholder {
-    background-color: var(--background-base);
+    background-color: var(--spice-main-bg);
     background-blend-mode: color-dodge;
 }
 .main-contextMenu-menuItemButton {
@@ -332,14 +343,14 @@ img[src*="equaliser"] {
 .main-card-card[data-context-menu-open="true"],
 [class*="listRow-isInteractive"]:hover,
 [class*="listRow-isInteractive"]:hover::after {
-    background-color: rgba(var(--spice-rgb-highlight), 0.5) !important;
+    background-color: var(--spice-highlight-bg) !important;
 }
 .main-trackList-trackListRow.main-trackList-selected,
 .main-trackList-trackListRow.main-trackList-selected:hover {
-    background-color: var(--spice-highlight) !important;
+    background-color: var(--spice-highlight-bg) !important;
 }
 .x-entityImage-imageContainer {
-    background-color: var(--spice-main);
+    background-color: var(--spice-card-bg);
 }
 .main-card-imageContainer > div:first-child {
     background-color: var(--card-color, var(--spice-border-inactive));
@@ -365,7 +376,7 @@ img[src*="equaliser"] {
     color: var(--spice-subtext) !important;
 }
 .x-filterBox-filterInput {
-    background-color: var(--background-highlight) !important;
+    background-color: var(--spice-highlight-bg) !important;
 }
 
 /* pane borders */
@@ -377,7 +388,7 @@ img[src*="equaliser"] {
     border: var(--border-width) var(--border-style);
     border-color: var(--spice-border-inactive);
     border-radius: var(--border-radius);
-    background-color: var(--spice-main);
+    background-color: var(--spice-main-bg);
     transition: border-color var(--border-transition);
 }
 .Root__globalNav:hover,
@@ -478,6 +489,7 @@ img[src*="equaliser"] {
 #context-menu div > ul {
     border: var(--border-width) var(--border-style) var(--spice-border-active);
     border-radius: var(--border-radius) !important;
+    background-color: var(--spice-main-bg);
 }
 .main-contextMenu-menu:not(:first-child) {
     border-top: 0 !important;
@@ -490,7 +502,8 @@ dialog,
     border: var(--border-width) var(--border-style) var(--spice-border-active);
     border-radius: var(--border-radius) !important;
     overflow: visible !important;
-    box-shadow: 0 0 0 16px var(--spice-main);
+    box-shadow: 0 0 0 16px var(--spice-main-bg);
+    background-color: var(--spice-main-bg);
 }
 .GenericModal::before,
 .GenericModal__overlay > div::before,
@@ -505,7 +518,7 @@ dialog::before,
     z-index: 9;
 }
 dialog::backdrop {
-    background-color: rgba(var(--spice-rgb-main), 80%) !important;
+    background-color: var(--spice-main-bg) !important;
 }
 
 /* inputs */
@@ -602,7 +615,7 @@ select:focus {
     box-shadow: none;
     border: var(--border-width) var(--border-style);
     border-color: var(--spice-border-active);
-    outline: 14px solid var(--spice-main);
+    outline: 14px solid var(--spice-main-bg);
 }
 .main-globalNav-searchContainer
     form
@@ -613,7 +626,8 @@ select:focus {
     margin: 24.5px 0;
     border: var(--border-width) var(--border-style);
     border-color: var(--spice-border-active);
-    outline: 14px solid var(--spice-main);
+    outline: 14px solid var(--spice-main-bg);
+    background-color: var(--spice-main-bg);
 }
 form .main-topBar-searchBar::placeholder,
 form .main-topBar-searchBar:placeholder-shown {
@@ -654,6 +668,7 @@ form .main-topBar-searchBar:placeholder-shown {
 .main-nowPlayingView-headerContainer,
 .main-yourLibraryX-libraryRootlist > div > div > div {
     box-shadow: none !important;
+    background-color: var(--spice-sidebar-bg);
 }
 
 /* sidebar config */
@@ -739,7 +754,7 @@ form .main-topBar-searchBar:placeholder-shown {
 
 /* lyrics page & sidebar */
 .lyrics-lyrics-background {
-    background-color: var(--spice-main);
+    background-color: var(--spice-main-bg);
 }
 .main-nowPlayingView-sectionHeaderSpacing.main-nowPlayingView-lyricsGradient {
     background-color: var(--background-tinted-base);
@@ -798,6 +813,7 @@ form .main-topBar-searchBar:placeholder-shown {
 .main-nowPlayingBar-nowPlayingBar {
     padding: 8px 8px 32px 8px;
     height: 96px;
+    background-color: var(--spice-player-bg);
 }
 .playback-bar {
     position: absolute;
@@ -1026,7 +1042,7 @@ button[data-testid="control-button-npv-episodes"] svg {
 /* connect bar */
 .main-connectBar-connectBar {
     position: absolute;
-    background-color: transparent !important;
+    background-color: var(--spice-player-bg) !important;
     mix-blend-mode: difference;
     pointer-events: none;
     right: var(--panel-gap);
