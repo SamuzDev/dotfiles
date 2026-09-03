@@ -63,6 +63,19 @@ link "gtk3" "gtk-3.0"
 link "noctalia" "noctalia"
 link "cava" "cava"
 link "spicetify" "spicetify"
+link "vesktop" "vesktop"
+link "vencord" "Vencord"
+
+# Firefox configs (go to ~/.mozilla/firefox/ not ~/.config/)
+info "Linking Firefox configs..."
+FIREFOX_PROFILE=$(find "$HOME/.mozilla/firefox" -maxdepth 1 -type d -name "*.default*" | head -1)
+if [ -n "$FIREFOX_PROFILE" ]; then
+    mkdir -p "$FIREFOX_PROFILE/chrome"
+    ln -sf "$DOTFILES_DIR/firefox/user.js" "$FIREFOX_PROFILE/user.js" 2>/dev/null && success "Linked user.js"
+    cp -r "$DOTFILES_DIR/firefox/chrome/"* "$FIREFOX_PROFILE/chrome/" 2>/dev/null && success "Copied Firefox chrome CSS"
+else
+    warn "Firefox profile not found, skipping Firefox configs"
+fi
 
 # Copy wallpapers (not symlink - for portability)
 info "Copying wallpapers..."
@@ -84,6 +97,8 @@ command -v btop >/dev/null 2>&1 || warn "btop not found - install: sudo pacman -
 command -v fuzzel >/dev/null 2>&1 || warn "fuzzel not found - install: sudo pacman -S fuzzel"
 command -v lazygit >/dev/null 2>&1 || warn "lazygit not found - install: sudo pacman -S lazygit"
 command -v cava >/dev/null 2>&1 || warn "cava not found - install: sudo pacman -S cava"
+command -v vesktop >/dev/null 2>&1 || warn "vesktop not found - install: yay -S vesktop"
+command -v firefox >/dev/null 2>&1 || warn "firefox not found - install: sudo pacman -S firefox"
 command -v eza >/dev/null 2>&1 || warn "eza not found - install: sudo pacman -S eza"
 command -v zoxide >/dev/null 2>&1 || warn "zoxide not found - install: sudo pacman -S zoxide"
 command -v direnv >/dev/null 2>&1 || warn "direnv not found - install: sudo pacman -S direnv"

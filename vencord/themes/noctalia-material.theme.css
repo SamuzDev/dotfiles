@@ -1,0 +1,94 @@
+/**
+ * @name Noctalia Material
+ * @version 3.0.6
+ * @description A fork of 'Material Discord' for Noctalia Shell
+ * @author CapnKitten
+ *
+ * @website http://github.com/CapnKitten
+ * @source https://github.com/CapnKitten/BetterDiscord/blob/master/Themes/Material-Discord/css/source.css
+ * @donate https://paypal.me/capnkitten
+ * @invite jzJkA6Z
+ */
+
+@import url("https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/css/source.css");
+
+/* Material You addon */
+@import url("https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/css/addons/material-you/source.css");
+
+
+
+
+/* MATERIAL YOU DARK THEME SETTINGS */
+.theme-dark {
+    --saturation-modifier: 0.31;
+    --lightness-modifier: 0.225;
+    --text-lightness-modifier: 1.0;
+}
+
+/* MATERIAL YOU LIGHT THEME SETTINGS */
+.theme-light {
+    --saturation-modifier: 0.74;
+    --lightness-modifier: 2.125;
+    --text-lightness-modifier: 1.0;
+}
+
+:root, .theme-dark, .theme-light {
+  /* See options at https://github.com/CapnKitten/Material-Discord */
+  /* Accent */
+  --accent-hue: 0;
+  --accent-saturation: 0%;
+  --accent-lightness: 100%;
+  --accent-text-color: #1b1b1b;
+
+  /* App */
+  --app-bg: #131313;
+  --main-color: #131313;
+  --main-alt: #131313;
+  --server-color: #131313;
+  --status-picker-color: #1f1f1f;
+  --sidebar-panel-color: #1f1f1f;
+  --chat-color: #131313;
+  --tooltip-color: #131313;
+  --tooltip-text-color: #e2e2e2;
+
+  /* Message */
+  --message-color: #1f1f1f;
+  --message-color-hover: hsl(
+    var(--accent-hue),
+    calc(var(--accent-saturation) * var(--saturation-modifier) * var(--saturation-factor)),
+    calc(var(--accent-lightness) * var(--lightness-modifier) * var(--ui-darkness-modifier) * 4)
+  ) !important;
+  --message-color-alt: #1b1b1b;
+  --attachment-color: #1b1b1b;
+  --main-textarea-color: #ffffff;
+  --main-textarea-button-color: #1b1b1b;
+  --main-textarea-color-alt: #c6c6c6;
+  --main-textarea-border: #1f1f1f;
+
+  /* Card */
+  --card-color-filled: #1f1f1f;
+  --card-color-hover: #993333;
+  --card-color-active: #993333;
+  --card-color-alt: #7d5c5c;
+  --card-color-alt-hover: #c6c6c6;
+  --card-border-color: #1f1f1f;
+  --card-header-text-color: #e2e2e2;
+
+  /* Slider & Switch */
+  --switch-knob-color: #1f1f1f;
+  --switch-slider-color: #131313;
+
+  /* Input */
+  --input-text-color: #e2e2e2;
+
+  /* Misc */
+  --app-watermark-one: "Noctalia";
+  --app-watermark-two: "Discord";
+
+  /* Ensure channels-default is different from the active one - works in dark mode / light mode is another story... */
+  --text-tertiary: hsl(
+        var(--accent-hue),
+        calc(var(--accent-saturation) * var(--saturation-modifier) * 0.78 * var(--saturation-factor)),
+        calc(var(--accent-lightness) * var(--lightness-modifier) * var(--ui-darkness-modifier) * var(--text-lightness-modifier) * 3.0)
+    ) !important;
+}
