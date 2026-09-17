@@ -1,8 +1,8 @@
 palette = "noctalia"
-add_newline = true
+add_newline = false
 
 format = "$username$directory$character"
-right_format = "$git_branch$git_status$cmd_duration$battery$time"
+right_format = "$nodejs$rust$golang$git_branch$git_status"
 
 scan_timeout = 100
 
@@ -11,19 +11,28 @@ show_always = true
 style_user = "bold pink"
 format = "[$user]($style) "
 
-[character]
-success_symbol = "[ ](bold pink)[](bold mauve)"
-error_symbol = "[ ](bold red)[](bold mauve)"
+[hostname]
+disabled = true
 
 [directory]
-style = "bold mauve"
 truncation_length = 3
 truncation_symbol = "…/"
+style = "bold subtext0"
+format = "[$path]($style) "
+
+[character]
+success_symbol = "[→](bold pink)"
+error_symbol = "[→](bold red)"
+
+[nodejs]
+symbol = ""
+style = "bold green"
+format = "[$symbol $version]($style) "
 
 [git_branch]
-symbol = " "
-style = "bold mauve"
-format = "on [$symbol$branch]($style) "
+symbol = ""
+style = "bold text"
+format = "[$symbol $branch]($style) "
 
 [git_status]
 style = "bold yellow"
@@ -31,46 +40,23 @@ format = "[$all_status$ahead_behind]($style) "
 untracked = "?"
 modified = "+"
 staged = "*"
+stashed = ""
 
-[cmd_duration]
-min_time = 3000
-style = "italic subtext0"
-format = "[ $duration]($style) "
+[rust]
+symbol = ""
+style = "bold peach"
+format = "[$symbol $version]($style) "
 
-[battery]
-full_symbol = "F "
-charging_symbol = "C "
-discharging_symbol = "D "
-format = "[$symbol $percentage]($style) "
-
-[[battery.display]]
-threshold = 20
-style = "bold red"
-
-[[battery.display]]
-threshold = 100
-style = "italic subtext0"
+[golang]
+symbol = ""
+style = "bold cyan"
+format = "[$symbol $version]($style) "
 
 [time]
 disabled = true
-time_format = "%R"
-style = "bold subtext1"
-format = "[ $time]($style)"
 
 [status]
-format = "[$symbol$common_meaning]($style) "
-map_symbol = true
 disabled = true
-
-[status.symbol]
-success = "ok"
-error = "err"
-
-[status.style]
-success = "bold green"
-error = "bold red"
-
-# <<< NOCTALIA STARSHIP PALETTE <<<
 
 # >>> NOCTALIA STARSHIP PALETTE >>>
 # Noctalia Starship Palette
@@ -90,8 +76,8 @@ black     = "#474747"
 # Extended palette (Catppuccin-compatible names)
 rosewater = "#c6c6c6"
 flamingo  = "#ffb4ab"
-pink      = "#f5c2e7"
-mauve     = "#cba6f7"
+pink      = "#7d7d7d"
+mauve     = "#7d7d7d"
 maroon    = "#ffb4ab"
 peach     = "#c6c6c6"
 teal      = "#ababab"
