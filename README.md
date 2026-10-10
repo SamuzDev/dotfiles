@@ -14,7 +14,7 @@ My personal Linux rice setup with **niri** + **noctalia** + **fish** + **starshi
 | Shell | [fish](https://fishshell.com/) |
 | Prompt | [starship](https://starship.rs/) |
 | Theme | [noctalia](https://noctalia.dev) |
-| Terminal | [alacritty](https://github.com/alacritty/alacritty) |
+| Terminal | [ghostty](https://ghostty.org) |
 | System Monitor | [btop](https://github.com/aristocratos/btop) |
 | App Launcher | [fuzzel](https://codeberg.org/dnkl/fuzzel) |
 | Git TUI | [lazygit](https://github.com/jesseduffield/lazygit) |
@@ -46,9 +46,8 @@ dotfiles/
 │   ├── config.jsonc
 │   ├── logo.txt
 │   └── generate-config.sh
-├── alacritty/         # Terminal config
-│   ├── alacritty.toml
-│   └── themes/
+├── ghostty/          # Terminal config
+│   └── config
 ├── btop/              # System monitor
 │   └── btop.conf
 ├── cava/              # Audio visualizer
@@ -105,7 +104,7 @@ The installer will:
 Install on CachyOS/Arch:
 
 ```bash
-sudo pacman -S niri fish starship fastfetch alacritty btop fuzzel lazygit eza zoxide direnv cava
+sudo pacman -S niri fish starship fastfetch ghostty btop fuzzel lazygit eza zoxide direnv cava
 # noctalia from AUR
 yay -S noctalia
 ```
