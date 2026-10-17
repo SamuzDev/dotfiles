@@ -1,0 +1,98 @@
+id           = "samuz/cava-vis"
+name         = "Cava Visualizer"
+version      = "1.0.0"
+plugin_api   = 18
+author       = "samuz"
+license      = "MIT"
+icon         = "chart-bar"
+description  = "Desktop audio visualizer: cava-style rounded bars anchored to the bottom of the screen."
+tags         = ["audio", "visualizer", "desktop"]
+dependencies = ["cava"]
+
+[[desktop_widget]]
+id    = "vis"
+entry = "vis.luau"
+
+  [[desktop_widget.setting]]
+  key       = "bands"
+  type      = "int"
+  label_key = "settings.bands.label"
+  description_key = "settings.bands.description"
+  default   = 40
+  min       = 8
+  max       = 128
+
+  [[desktop_widget.setting]]
+  key       = "bar_max_height"
+  type      = "double"
+  label_key = "settings.bar_max_height.label"
+  description_key = "settings.bar_max_height.description"
+  default   = 56.0
+  min       = 8.0
+  max       = 400.0
+
+  [[desktop_widget.setting]]
+  key       = "box_width"
+  type      = "double"
+  label_key = "settings.box_width.label"
+  description_key = "settings.box_width.description"
+  default   = 1920.0
+  min       = 200.0
+  max       = 7680.0
+
+  [[desktop_widget.setting]]
+  key       = "row_height"
+  type      = "double"
+  label_key = "settings.row_height.label"
+  description_key = "settings.row_height.description"
+  default   = 200.0
+  min       = 40.0
+  max       = 600.0
+
+  [[desktop_widget.setting]]
+  key       = "spacing"
+  type      = "double"
+  label_key = "settings.spacing.label"
+  description_key = "settings.spacing.description"
+  default   = 3.0
+  min       = 0.0
+  max       = 40.0
+
+  [[desktop_widget.setting]]
+  key       = "radius"
+  type      = "double"
+  label_key = "settings.radius.label"
+  description_key = "settings.radius.description"
+  default   = 5.0
+  min       = 0.0
+  max       = 60.0
+
+  [[desktop_widget.setting]]
+  key       = "bar_color"
+  type      = "color"
+  label_key = "settings.bar_color.label"
+  description_key = "settings.bar_color.description"
+  default   = "primary"
+
+  [[desktop_widget.setting]]
+  key       = "bar_opacity"
+  type      = "double"
+  label_key = "settings.bar_opacity.label"
+  description_key = "settings.bar_opacity.description"
+  default   = 0.7
+  min       = 0.0
+  max       = 1.0
+
+  [[desktop_widget.setting]]
+  key       = "hide_when_idle"
+  type      = "bool"
+  label_key = "settings.hide_when_idle.label"
+  description_key = "settings.hide_when_idle.description"
+  default   = true
+
+  [[desktop_widget.setting]]
+  key       = "hide_with_windows"
+  type      = "bool"
+  label_key = "settings.hide_with_windows.label"
+  description_key = "settings.hide_with_windows.description"
+  default   = true

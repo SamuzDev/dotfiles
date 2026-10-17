@@ -1,0 +1,30 @@
+id           = "samuz/desktop-hide"
+name         = "Desktop Hide"
+version      = "1.0.0"
+plugin_api   = 24
+author       = "samuz"
+license      = "MIT"
+icon         = "eye-off"
+description  = "Hides every desktop widget while the focused workspace has a window, like the bar's smart auto-hide."
+tags         = ["desktop", "niri"]
+dependencies = ["niri", "jq"]
+
+[[service]]
+id    = "hide"
+entry = "hide.luau"
+
+[[setting]]
+key             = "hide_with_windows"
+type            = "bool"
+label_key       = "settings.hide_with_windows.label"
+description_key = "settings.hide_with_windows.description"
+default         = true
+
+[[setting]]
+key             = "poll_ms"
+type            = "int"
+label_key       = "settings.poll_ms.label"
+description_key = "settings.poll_ms.description"
+default         = 500
+min             = 100
+max             = 5000

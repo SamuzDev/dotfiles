@@ -1,0 +1,22 @@
+{
+  "settings.bands.label": "Number of bars",
+  "settings.bands.description": "How many spectrum bars to draw. Must match the generated cava config (reloads automatically).",
+  "settings.bar_max_height.label": "Max bar height (px)",
+  "settings.bar_max_height.description": "Tallest a bar can grow, in logical pixels.",
+  "settings.row_height.label": "Row height (px)",
+  "settings.row_height.description": "Fixed height of the bar row. Must equal the widget box_height so the bars stay pinned to the bottom edge.",
+  "settings.spacing.label": "Bar spacing (px)",
+  "settings.spacing.description": "Horizontal gap between bars.",
+  "settings.radius.label": "Corner radius (px)",
+  "settings.radius.description": "Rounding applied to each bar.",
+  "settings.bar_color.label": "Bar color",
+  "settings.bar_color.description": "Palette role or hex color for the bars.",
+  "settings.bar_opacity.label": "Bar opacity",
+  "settings.bar_opacity.description": "Transparency of the bars (0.0 - 1.0).",
+  "settings.hide_when_idle.label": "Hide when no audio",
+  "settings.hide_when_idle.description": "Fade the bars out when nothing is playing.",
+  "settings.hide_with_windows.label": "Hide when a window is open",
+  "settings.hide_with_windows.description": "Hides the bars while the current workspace has any window. Needs niri and jq installed.",
+  "settings.box_width.label": "Box width (px)",
+  "settings.box_width.description": "Width used to lay the bars out; keep it equal to the widget box_width."
+}

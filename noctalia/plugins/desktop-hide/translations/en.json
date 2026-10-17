@@ -1,0 +1,6 @@
+{
+  "settings.hide_with_windows.label": "Hide with windows",
+  "settings.hide_with_windows.description": "Hides all desktop widgets while the focused workspace has any window. Needs niri and jq installed.",
+  "settings.poll_ms.label": "Poll interval (ms)",
+  "settings.poll_ms.description": "How often the focused workspace is checked for windows."
+}

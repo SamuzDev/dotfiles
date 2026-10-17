@@ -66,6 +66,13 @@ link "spicetify" "spicetify"
 link "vesktop" "vesktop"
 link "vencord" "Vencord"
 
+# Noctalia state and plugins (not in ~/.config/)
+info "Setting up noctalia state and plugins..."
+mkdir -p "$HOME/.local/state/noctalia"
+mkdir -p "$HOME/.local/share/noctalia"
+ln -sf "$DOTFILES_DIR/noctalia/settings.toml" "$HOME/.local/state/noctalia/settings.toml" && success "Linked noctalia settings.toml"
+ln -sf "$DOTFILES_DIR/noctalia/plugins" "$HOME/.local/share/noctalia/plugins" && success "Linked noctalia plugins"
+
 # Firefox configs (go to ~/.mozilla/firefox/ not ~/.config/)
 info "Linking Firefox configs..."
 FIREFOX_PROFILE=$(find "$HOME/.mozilla/firefox" -maxdepth 1 -type d -name "*.default*" | head -1)
